@@ -1,6 +1,6 @@
 import puppeteer from "puppeteer-extra";
 import StealthPlugin from "puppeteer-extra-plugin-stealth";
-import puppeteerConfig from "../../puppeteer.config.js";
+// import puppeteerConfig from "../../puppeteer.config.js";
 
 // Use Puppeteer's stealth plugin to bypass bot detection
 puppeteer.use(StealthPlugin());
@@ -24,7 +24,7 @@ async function scrapeProduct(url) {
       "--disable-infobars",
       "--disable-dev-shm-usage",
     ],
-    cacheDirectory: puppeteerConfig.cacheDirectory, // 🔹 Ensure Puppeteer uses the configured cache directory
+    // cacheDirectory: puppeteerConfig.cacheDirectory, // 🔹 Ensure Puppeteer uses the configured cache directory
   });
 
   const page = await browser.newPage();
